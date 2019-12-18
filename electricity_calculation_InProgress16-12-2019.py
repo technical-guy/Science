@@ -1,7 +1,8 @@
 #---------------------------------------
 #=======================================
 #
-# Scientific electricity equation solver
+# Scientific electricity equation and calculation solver
+# by Renaud Lecerf
 #
 #=======================================
 #---------------------------------------
