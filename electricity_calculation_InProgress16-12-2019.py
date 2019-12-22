@@ -2,14 +2,14 @@
 #=======================================
 #
 # Scientific electricity equation solver
-# by renaud lecerf
+# by Renaud Recerf
 #=======================================
 #---------------------------------------
 
 
 
 
-# Demonstrate list
+
 # -*- coding: utf-8 -*-
 
 import matplotlib.pyplot as plt
@@ -156,7 +156,9 @@ while choice != "0":
                     print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
                     # following lines codes TBC for formula result
             kwh = kw * h
-            joule = 3600000 * kwh
+            #joule = 3600000 * kwh
+            timeSecond = h * 3600           # E(joule) = P(watt) * t(second)
+            joule = p * timeSecond
             print("")
             result1 = "Energy used for {} hours will be {} kWh or {} joules".format(h, kwh, joule)
             print(result1)
