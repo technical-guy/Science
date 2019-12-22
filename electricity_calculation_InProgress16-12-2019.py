@@ -6,7 +6,6 @@
 #=======================================
 #---------------------------------------
 
-# new change added here
 
 
 
@@ -52,8 +51,20 @@ while choice != "0":
         def current():
             print("===INITIALISING CURRENT CALCULATION===")
             print('')
-            v = float(input("Enter Voltage in Volts: "))
-            r = float(input("Enter Resistance in Ohms: "))
+            while True:
+                try:
+                    v = float(input("Enter Voltage in Volts: "))
+                    break
+                except ValueError:
+                    print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
+
+            while True:
+                try:
+                    r = float(input("Enter Resistance in Ohms: "))
+                    break
+                except ValueError:
+                    print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
+
             i = v / r
             print('')
             result = "Resulting Current is {} Amperes".format(i)
@@ -65,8 +76,20 @@ while choice != "0":
         def voltage():
             print("===INITIALISING VOLTAGE CALCULATION===")
             print('')
-            r = float(input("Enter Resistance in Ohms: "))
-            i = float(input("Enter Current in Amperes: "))
+            while True:
+                try:
+                    r = float(input("Enter Resistance in Ohms: "))
+                    break
+                except ValueError:
+                    print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
+
+            while True:
+                try:
+                    i = float(input("Enter Current in Amperes: "))
+                    break
+                except ValueError:
+                    print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
+
             v = r * i
             print('')
             result = "Resulting Voltage is {} Volts".format(v)
@@ -78,8 +101,19 @@ while choice != "0":
         def resistance():
             print("===INITIALISING RESISTANCE CALCULATION===")
             print('')
-            v = float(input("Enter Voltage in Volts: "))
-            i = float(input("Enter Current in Amperes: "))
+            while True:
+                try:
+                    v = float(input("Enter Voltage in Volts: "))
+                    break
+                except ValueError:
+                    print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
+
+            while True:
+                try:
+                    i = float(input("Enter Current in Amperes: "))
+                    break
+                except ValueError:
+                    print("..... WARNING ..... DATA MUST BE INTEGER, please try again ...")
             r = v / i
             print('')
             result = "Resistance is {} Ohms".format(r)
